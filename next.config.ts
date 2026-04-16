@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -13,6 +15,7 @@ const nextConfig: NextConfig = {
       }
     ],
   },
+  basePath: '/portfolio-new',
   experimental: {
     allowedDevOrigins: ['127.0.2.2', 'localhost:3000'],
   }
